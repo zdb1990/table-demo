@@ -176,6 +176,7 @@ export class TableComponent implements OnInit {
 
   collapse(array: TreeNodeInterface[], data: TreeNodeInterface, $event: boolean): void {
     if ($event === false) {
+      // 如果收起状态，data里有children 遍历下 arr数组里与children.id相同 把他的开关target.expand全部变为false;
       if (data.children) {
         data.children.forEach(d => {
           const target = array.find(a => a.id === d.id);
@@ -206,7 +207,6 @@ export class TableComponent implements OnInit {
   visitNode(node: TreeNodeInterface, hasMap: object, array: TreeNodeInterface[]): void {
     if (!hasMap[node.id]) {
       hasMap[node.id] = true;
-      console.log(hasMap[node.id])
       array.push(node);
     }
   }
