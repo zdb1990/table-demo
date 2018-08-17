@@ -1,1 +1,34 @@
 /* You can add global styles to this file, and also import other style files */
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    overflow-y: hidden;
+}
+
+.ant-table-tbody>tr:hover>.title {
+    background-color: #181920 !important;
+}
+
+.ant-table-tbody>tr:hover>td {
+    background-color: #282932 !important;
+}
+
+
+/* ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(27, 52, 96, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(27, 52, 96, 1);
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(27, 52, 96, 0.7);
+} */

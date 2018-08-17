@@ -1,14 +1,35 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>ScollWeb</title>
-  <base href="/">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+<head>
+    <meta charset="utf-8">
+    <title>ScollWeb</title>
+    <base href="/">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
 </head>
+
 <body>
-  <app-root></app-root>
+    <app-root></app-root>
+    <script>
+        window.addEventListener('DOMContentLoaded', function(e) {
+            $('#scroll-body').css('height', ($(window).height() - 20) + 'px');
+            $("#scroll-body").niceScroll({
+                cursorcolor: "#303439",
+                cursorwidth: "10px",
+                background: "rgba(20,20,20,0.3)",
+                cursorborder: "1px solid #303439",
+                cursorborderradius: 5
+            });
+        }, false)
+
+        window.addEventListener('resize', function() {
+            var clientH = $(window).height();
+            $('#scroll-body').css('height', (clientH - 20) + 'px');
+        }, false)
+    </script>
 </body>
+
 </html>
