@@ -12,6 +12,10 @@ html {
     background-color: #181920 !important;
 }
 
+.ant-table-tbody>tr>.title:hover~td {
+    background-color: #181920 !important;
+}
+
 .ant-table-tbody>tr:hover>td {
     background-color: #282932 !important;
 }
